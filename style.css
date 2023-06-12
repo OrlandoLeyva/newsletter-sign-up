@@ -1,0 +1,124 @@
+@import url('/assets/fonts/Roboto-Bold.ttf');
+@import url('/assets/fonts/Roboto-Regular.ttf');
+
+:root {
+    /* COLORS */
+    --Tomato: hsl(4, 100%, 67%);
+
+
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+    /* TYPOGRAPHY */
+    --fs-big: 2.3rem;
+    --fs--general: 1rem;
+
+    --fw-bold: 700;
+    --fw-normal: 400;
+}
+
+/* GENERAL */
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: var(--fw-normal);
+    min-height: 100vh;
+    color: var(--Charcoal-Grey);
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+input {font: inherit}
+
+img {max-width: 100%;}
+
+ul {
+    list-style: none;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN IMAGE SECTION */
+
+.main-image-section {
+    order: -1;
+}
+
+/* FORM SECTION */
+
+.title {
+    color: var(--Dark-Slate-Grey);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-big);
+}
+
+.form-section {
+    padding: 1rem;
+}
+
+.form-section > * {
+    margin-top: 1rem;
+}
+
+.updates-list {
+    margin-bottom: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.updates-list li {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+.email-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.email-form input,
+.email-form input:focus,
+.email-form input:active {
+    border: 1px solid var(--Grey);
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.send-email-button, .email-form input {
+    padding: .8rem;
+    border-radius: 8px;
+    /* width: 100%; */
+    outline: none;
+}
+
+.send-email-button {
+    background-color: var(--Dark-Slate-Grey);
+    border: none;
+    color: white;
+    font-weight: var(--fw-bold);
+}
