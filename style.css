@@ -61,7 +61,7 @@ main {
 
 /* FORM SECTION */
 
-.title {
+.title, .success-title {
     color: var(--Dark-Slate-Grey);
     font-weight: var(--fw-bold);
     font-size: var(--fs-big);
@@ -95,11 +95,31 @@ main {
     margin-bottom: 10px;
 }
 
+.error-message {
+    display: none;
+}
+
 .email-form {
     display: flex;
     flex-direction: column;
     gap: .5rem;
 }
+
+/* ERROR STYLES */
+.email-form.error input {
+    border: 1px solid var(--Tomato);
+    background-color: hsl(4, 100%, 67%, .3);
+}
+.email-form.error input::placeholder {
+    color: var(--Tomato);
+    font-weight: var(--fw-bold);
+}
+.email-form.error .error-message {
+    display: inline;
+    color: var(--Tomato);
+    font-weight: var(--fw-bold);
+}
+/* ERROR STYLES END */
 
 .email-form input,
 .email-form input:focus,
@@ -121,4 +141,16 @@ main {
     border: none;
     color: white;
     font-weight: var(--fw-bold);
+}
+
+/* success message */
+
+.success-message {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.success-message div > * {
+    padding: .8rem;
 }

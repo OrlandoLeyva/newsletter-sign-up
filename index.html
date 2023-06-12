@@ -28,10 +28,10 @@
           <p>And much more!</p>
         </li>
       </ul>
-      <form class="email-form" id="email-form">
+      <form class="email-form" id="email-form" method="post">
         <label for="email" class="email-label">
           <p>Email address</p>
-          <p>Valid email required</p>
+          <p class="error-message">Valid email required</p>
         </label>
         <input type="email" name="email" id="email" placeholder="email@company.com">
         <button class="send-email-button" id="send-email-button">Subscribe to monthly newsletter</button>
@@ -40,8 +40,9 @@
     <section class="main-image-section">
       <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration ">
     </section>
+
   </main>
-  
+  <script src="./index.js"></script>
 </body>
 </html>
 
@@ -59,10 +60,9 @@
 
   <!-- Success message start -->
 
-  <!-- Thanks for subscribing!
+  <!-- 
 
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
+  
 
   Dismiss message -->
 
