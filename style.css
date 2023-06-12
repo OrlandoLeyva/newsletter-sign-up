@@ -51,12 +51,24 @@ ul {
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 /* MAIN IMAGE SECTION */
 
 .main-image-section {
     order: -1;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 100%;
+    height: 280px;
+    background-image: url('/assets/images/illustration-sign-up-mobile.svg');
+    background-size: cover;
+}
+
+.main-image-section img {
+    width: 100%;
+    max-height: 280px;
 }
 
 /* FORM SECTION */
@@ -149,8 +161,45 @@ main {
     height: 100vh;
     display: flex;
     align-items: center;
+    max-width: 400px;
 }
 
 .success-message div > * {
     padding: .8rem;
+}
+
+
+/* DESKTOP DESIGN  */
+@media (min-width: 800px) {   
+    body {
+        background-color: var(--Dark-Slate-Grey);
+        display: flex;
+        align-items: center;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+        background-color: white;
+        width: 90%;
+        margin: auto;
+        padding: 1rem;
+        border-radius: 15px;
+        max-width: 750px;
+    }
+
+    .main-image-section {
+        order: 2;
+        background-image: url('./assets/images/illustration-sign-up-desktop.svg');
+        height: 100%;
+    }
+
+    .success-message {
+        grid-column: 1 /span 2;
+        height: min-content;
+        width: 400px;
+        justify-self: center;
+    }
+    
 }
